@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Roberto Restaurant Grill | Authentic Charcoal Flavor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            gold: '#d4af37',
+                            orange: '#f97316',
+                            dark: '#0c0a09',
+                            stone: '#1c1917',
+                            light: '#fafaf9'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(12,10,9,0.3) 0%, rgba(12,10,9,0.9) 100%);
+        }
+        .map-container {
+            filter: grayscale(100%) invert(92%) contrast(83%);
+        }
+    </style>
+</head>
+<body class="bg-brand-light text-brand-dark font-sans selection:bg-brand-orange selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-brand-dark/90 backdrop-blur-md border-b border-white/5 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="bg-brand-orange p-1.5 rounded-lg group-hover:rotate-12 transition-transform">
+                    <i data-lucide="flame" class="text-white w-6 h-6"></i>
+                </div>
+                <span class="font-serif text-2xl font-bold tracking-tight text-white">EL ROBERTO RESTO GRILL</span>
+            </a>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-semibold uppercase tracking-widest text-gray-300">
+                <a href="#about" class="hover:text-brand-orange transition-colors">Our Story</a>
+                <a href="#menu" class="hover:text-brand-orange transition-colors">Menu</a>
+                <a href="#find-us" class="hover:text-brand-orange transition-colors">Find Us</a>
+                <a href="#reserve" class="bg-brand-orange text-white px-6 py-2.5 rounded-full hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/20">Book Now</a>
+            </div>
+
+            <button class="md:hidden text-white">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <img src="C:\Users\user\Desktop\MUTCH/images/liempo.jpg" 
+             alt="Grill background" class="absolute inset-0 w-full h-full object-cover scale-96 animate-[pulse_10s_ease-in-out_infinite]">
+        <div class="absolute inset-0 hero-gradient"></div>
+        
+        <div class="relative z-10 text-center px-6">
+            <div class="inline-block px-4 py-1.5 mb-6 rounded-full border border-brand-orange/30 bg-brand-orange/10 backdrop-blur-sm">
+                <span class="text-brand-orange text-xs font-bold uppercase tracking-[0.3em]">San Jose's Premier Lugaw and Chicken Inasal</span>
+            </div>
+            <h1 class="font-serif text-6xl md:text-8xl text-white mb-8 leading-none">
+                The Soul of <br><span class="text-brand-orange">The Grill</span>
+            </h1>
+            <p class="text-gray-300 max-w-xl mx-auto text-lg mb-12 leading-relaxed">
+                Experience the authentic taste of charcoal-grilled perfection at El Roberto. Where tradition meets the flame.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#menu" class="w-full sm:w-auto bg-white text-brand-dark px-10 py-4 rounded-full font-bold hover:bg-brand-orange hover:text-white transition-all text-sm uppercase tracking-widest">Explore Menu</a>
+                <a href="#find-us" class="w-full sm:w-auto border border-white/30 text-white px-10 py-4 rounded-full font-bold hover:bg-white/10 backdrop-blur-sm transition-all text-sm uppercase tracking-widest">Our Location</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 bg-white">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="absolute -top-4 -left-4 w-24 h-24 bg-brand-orange/10 rounded-full blur-3xl"></div>
+                <img src="C:\Users\user\Desktop\MUTCH/images/resto.png" 
+                     alt="Chef Roberto" class="rounded-2xl shadow-2xl relative z-10">
+                <div class="absolute -bottom-6 -right-6 bg-brand-dark p-8 rounded-2xl shadow-xl hidden lg:block">
+                    <p class="text-brand-orange font-serif text-4xl font-bold">25+</p>
+                    <p class="text-white text-xs uppercase tracking-widest font-semibold">Years of Fire</p>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <h2 class="text-brand-orange font-bold uppercase tracking-widest text-sm italic">The Roberto Legacy</h2>
+                <h3 class="font-serif text-4xl md:text-5xl text-brand-dark leading-tight">Flavor is the Only <br>Language We Speak</h3>
+                <p class="text-gray-600 leading-relaxed text-lg">
+                    El Roberto Restaurant Grill started as a small family gathering around a backyard pit. Today, it stands as a testament to the power of honest ingredients and the perfect temperature. 
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    Every cut of meat is hand-selected and seasoned with our signature blend before meeting the intense heat of local charcoal. It's not just a meal; it's the culmination of Roberto's lifelong obsession with the perfect char.
+                </p>
+                <div class="pt-4">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/Signature_of_Robert_E._Lee.svg" alt="Signature" class="h-12 opacity-50">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlight -->
+    <section id="menu" class="py-24 px-6 bg-brand-stone text-white">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="font-serif text-4xl md:text-5xl mb-4">From our Cook Roberto</h2>
+            <p class="text-gray-400">Our signature selections for the true meat enthusiast</p>
+        </div>
+        
+        <div class="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Item 1 -->
+            <div class="group bg-white/5 p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition-all">
+                <div class="overflow-hidden rounded-2xl mb-6">
+                    <img src="C:\Users\user\Desktop\MUTCH/images/lugaw.jpg" 
+                         alt="Lugaw" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-serif text-xl">Lugaw - Unli</h4>
+                    <span class="text-brand-orange font-bold">₱50.00</span>
+                </div>
+                <p class="text-gray-400 text-sm">Lugaw is best translated in English as Filipino rice porridge or rice gruel. It is a savory, 
+			thick comfort food made by boiling glutinous or regular rice with water, ginger, and garlic until the grains are soft, often 
+			served with toppings like toasted garlic, green onions, egg and chicken.</p>
+            </div>
+            <!-- Item 2 -->
+            <div class="group bg-white/5 p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition-all">
+                <div class="overflow-hidden rounded-2xl mb-6">
+                    <img src="C:\Users\user\Desktop\MUTCH/images/inasal.jpg" 
+                         alt="Chicken" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-serif text-xl">Chicken Inasal - Unli Rice</h4>
+                    <span class="text-brand-orange font-bold">₱150.00</span>
+                </div>
+                <p class="text-gray-400 text-sm">It is made from chicken, typically served by the breast and wing (Pecho) or leg and/or thigh (Paa/Hita) parts, 
+			that is marinated in a mixture of calamansi, black pepper, coconut vinegar and annatto before being grilled over hot coals while basted with 
+			the marinade.</p>
+            </div>
+            <!-- Item 3 -->
+            <div class="group bg-white/5 p-6 rounded-3xl border border-white/10 hover:bg-white/10 transition-all">
+                <div class="overflow-hidden rounded-2xl mb-6">
+                    <img src="C:\Users\user\Desktop\MUTCH/images/liempo.jpg" 
+                         alt="Liempo" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="flex justify-between items-start mb-2">
+                    <h4 class="font-serif text-xl">Grilled Liempo</h4>
+                    <span class="text-brand-orange font-bold">₱190.00</span>
+                </div>
+                <p class="text-gray-400 text-sm">Inihaw na Liempo is Filipino grilled pork belly marinated in soy sauce and citrus, then cooked over charcoal.
+			 “Inihaw” means grilled. “Liempo” is pork belly. Filipino marinades for grilled pork typically use soy sauce, calamansi, lime, or lemon, and garlic.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map and Contact Section -->
+    <section id="find-us" class="py-24 px-6 bg-brand-light">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8">
+                    <div>
+                        <h2 class="font-serif text-4xl mb-4">Find El Roberto Resto-Grill</h2>
+                        <p class="text-gray-600">Taste the best grilled dishes in Puerto Princesa City.</p>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-orange/10 p-3 rounded-xl text-brand-orange">
+                                <i data-lucide="map-pin"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-dark">Address</h4>
+                                <p class="text-gray-700 font-medium">Atis Road, Syete, Puerto Princesa City, 5300 Palawan</p>
+                                <a href="https://www.google.com/maps/place/EL+ROBERTO+RESTO-GRILL/@9.7932948,118.7561378,17z/data=!3m1!4b1!4m6!3m5!1s0x33b563c3663a8115:0x2f7aa3427dbe6e99!8m2!3d9.7932895!4d118.7587181!16s%2Fg%2F11z1wv8nwj" 
+                                   target="_blank" 
+                                   class="text-brand-orange text-sm font-bold flex items-center gap-1 mt-2 hover:underline">
+                                    Get Directions <i data-lucide="external-link" class="w-3 h-3"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-brand-orange/10 p-3 rounded-xl text-brand-orange">
+                                <i data-lucide="phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Contact</h4>
+                                <p class="text-gray-500">0962 574 1308</p>
+                                <p class="text-gray-500">atagalog1996@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="h-[450px] rounded-3xl overflow-hidden shadow-2xl relative border-8 border-white">
+                    <!-- Updated Iframe for Puerto Princesa Location -->
+                    <iframe 
+                        class="w-full h-full border-0 map-container" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3923.633887010488!2d118.7561378!3d9.7932948!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33b563c3663a8115%3A0x2f7aa3427dbe6e99!2sEL%20ROBERTO%20RESTO-GRILL!5e0!3m2!1sen!2sph!4v1714295300000!5m2!1sen!2sph" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white py-12 px-6 border-t border-white/5">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-2">
+                <div class="bg-brand-orange p-1.5 rounded-lg">
+                    <i data-lucide="flame" class="text-white w-5 h-5"></i>
+                </div>
+                <span class="font-serif text-xl font-bold tracking-tight text-white uppercase">EL ROBERTO RESTO GRILL</span>
+            </div>
+            <p class="text-gray-600 text-xs uppercase tracking-widest">&copy; 2026 El Roberto Restaurant Grill. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'translate-y-10', 'opacity-0');
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
