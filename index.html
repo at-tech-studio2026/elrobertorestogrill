@@ -562,7 +562,7 @@
         }
 
         function sendWhatsAppNotification() {
-            const phoneNumber = "09625741308"; // Your contact number
+            const phoneNumber = "+6393248101"; // Your contact number
             const text = `*New Reservation Details:*%0AName: ${reservationData.name}%0ADate: ${reservationData.date}%0ATime: ${reservationData.time}%0AGuests: ${reservationData.guests}`;
             window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${text}`, '_blank');
             
