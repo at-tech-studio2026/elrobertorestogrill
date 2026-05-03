@@ -613,56 +613,67 @@
         </div>
     </footer>
 
-     <script>
+     <!-- Script Section -->
+    <script>
         lucide.createIcons();
 
-        let reservationData = {};
+        function switchTab(categoryId) {
+            document.querySelectorAll('.menu-category').forEach(cat => cat.classList.add('hidden'));
+            document.getElementById('cat-' + categoryId).classList.remove('hidden');
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + categoryId).classList.add('active');
+        }
 
         function toggleModal(show) {
             const modal = document.getElementById('reservationModal');
             if (show) {
                 modal.classList.remove('hidden');
                 document.body.style.overflow = 'hidden';
-                resetModal();
             } else {
                 modal.classList.add('hidden');
                 document.body.style.overflow = 'auto';
             }
         }
 
-        function resetModal() {
-            document.getElementById('reservationStep1').classList.remove('hidden');
-            document.getElementById('reservationStep2').classList.add('hidden');
-            document.getElementById('thankYouMessage').classList.add('hidden');
+        // Lightbox Functions
+        function openLightbox(imgSrc) {
+            const lightbox = document.getElementById('imageLightbox');
+            const img = document.getElementById('lightboxImg');
+            img.src = imgSrc;
+            lightbox.classList.add('active');
+            lightbox.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
         }
 
-        function handleReservation(event) {
-            event.preventDefault();
-            reservationData = {
-                name: document.getElementById('resName').value,
-                date: document.getElementById('resDate').value,
-                time: document.getElementById('resTime').value,
-                guests: document.getElementById('resGuests').value
-            };
+        function closeLightbox() {
+            const lightbox = document.getElementById('imageLightbox');
+            lightbox.classList.remove('active');
+            lightbox.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox on Escape key
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        function handleReservation(e) {
+            e.preventDefault();
             document.getElementById('reservationStep1').classList.add('hidden');
             document.getElementById('reservationStep2').classList.remove('hidden');
         }
 
         function sendWhatsAppNotification() {
-            const phoneNumber = "+639923248101"; // Your contact number
-            const text = `*New Reservation Details:*%0AName: ${reservationData.name}%0ADate: ${reservationData.date}%0ATime: ${reservationData.time}%0AGuests: ${reservationData.guests}`;
-            window.open(`https://api.whatsapp.com/send?phone=${phoneNumber}&text=${text}`, '_blank');
+            const name = document.getElementById('resName').value;
+            const date = document.getElementById('resDate').value;
+            const time = document.getElementById('resTime').value;
+            const guests = document.getElementById('resGuests').value;
+
+            const text = `Reservation Request:\nName: ${name}\nDate: ${date}\nTime: ${time}\nGuests: ${guests}`;
+            window.open(`https://wa.me/639123456789?text=${encodeURIComponent(text)}`, '_blank');
             
-            // Show official thank you message
             document.getElementById('reservationStep2').classList.add('hidden');
             document.getElementById('thankYouMessage').classList.remove('hidden');
-        }
-
-        function switchTab(categoryId) {
-            document.querySelectorAll('.menu-category').forEach(el => el.classList.add('hidden'));
-            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
-            document.getElementById('cat-' + categoryId).classList.remove('hidden');
-            document.getElementById('btn-' + categoryId).classList.add('active');
         }
     </script>
 </body>
